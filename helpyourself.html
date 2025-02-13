@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven - Mind Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('𝐌𝐑_ 𝐏𝐄𝐑𝐅𝐄𝐂𝐓𝐋𝐘 𝐅𝐈𝐍𝐄_ 𝐦𝐢𝐲𝐚 𝐚𝐭𝐬𝐮𝐦𝐮.gif');
+            
+            background-size: cover; /* Ensure the image covers the whole page */
+            background-repeat: no-repeat; /* Prevent tiling of the image */
+            background-attachment: fixed; /* Make the background fixed on scroll */
+            background-position: center; /* Center the image on the page */
+        }
+        .header {
+            background-color: #c8b9b9;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-logo {
+            background-color: #908b8b;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #6b6363;
+            font-weight: bold;
+        }
+        .nav-links a.active {
+            color: #c53e3e;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .accordion {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .accordion-item {
+            margin: 10px 0;
+        }
+        .accordion-header {
+            background-color: #c8b9b9;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: #000;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-header:hover {
+            background-color: #b0a4a4;
+        }
+        .accordion-content {
+            display: none;
+            background-color: #e7e1e1;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+        .accordion-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .accordion-content li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">MIND HAVEN</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="haven.html" class="active">Haven</a>
+            <a href="helpyourself.html">Help yourself</a>
+            <a href="talk_to_real_people.html">Talk to real people</a>
+            <a href="fire.html">Vent into the fire</a>
+            <a href="#">Talk to your role model</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Books</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>The Body Keeps the Score</b> by Bessel van der Kolk<br>Explores the impact of trauma on the body and mind, with practical insights for healing.</li>
+                        <li><b>Lost Connections</b> by Johann Hari<br>Discusses the root causes of depression and offers ways to reconnect with life.</li>
+                        <li><b>Feeling Good: The New Mood Therapy</b> by David D. Burns<br>A classic book on cognitive behavioral therapy (CBT) techniques for overcoming depression.</li>
+                        <li><b>Reasons to Stay Alive</b> by Matt Haig<br>A personal and uplifting account of dealing with depression and anxiety.</li>
+                        <li><b>Mind Over Mood</b> by Dennis Greenberger and Christine A. Padesky<br>A step-by-step workbook to develop practical coping skills for emotional challenges.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">YouTube Channels</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>Therapy in a Nutshell</b>: Offers practical mental health advice, coping strategies, and therapeutic exercises.</li>
+                        <li><b>Kati Morton</b>: A licensed therapist covering topics like anxiety, depression, and trauma.</li>
+                        <li><b>Dr. Tracey Marks</b>: A psychiatrist providing in-depth insights on mental health disorders and self-help strategies.</li>
+                        <li><b>Psych Hub</b>: Educational videos breaking down mental health topics with animations and expert input.</li>
+                        <li><b>The School of Life</b>: Philosophical and emotional well-being advice, exploring the human psyche.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Blogs</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>Psychology Today Blog</b>: Articles from experts on mental health, relationships, and coping mechanisms.</li>
+                        <li><b>Tiny Buddha</b>: Covers mindfulness, happiness, and overcoming life challenges with relatable stories.</li>
+                        <li><b>Mindful Blog</b>: Focused on mindfulness practices for stress and mental clarity.</li>
+                        <li><b>Headspace Blog</b>: Practical tips on meditation, anxiety management, and self-care.</li>
+                        <li><b>BetterHelp Blog</b>: Offers professional advice on various mental health topics and how to seek therapy.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Communities</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>7 Cups of Tea</b>: An online platform where you can talk to trained listeners for free.</li>
+                        <li><b>Reddit - r/mentalhealth</b>: A supportive forum for discussing mental health issues and sharing advice.</li>
+                        <li><b>National Alliance on Mental Illness (NAMI)</b>: Offers free peer-led support groups and community programs.</li>
+                        <li><b>Mental Health America (MHA)</b>: Provides online screening tools and connects you to community programs.</li>
+                        <li><b>The Mighty</b>: A community-driven platform with stories and resources on mental health and chronic illnesses.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript for Accordion
+        const headers = document.querySelectorAll(".accordion-header");
+
+        headers.forEach(header => {
+            header.addEventListener("click", () => {
+                const content = header.nextElementSibling;
+                const isVisible = content.style.display === "block";
+                
+                // Close all open items
+                document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+                
+                // Toggle current item
+                content.style.display = isVisible ? "none" : "block";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Evaluation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('Little pleasure on one of my favorite anime_.gif');
+            background-size: cover; /* Ensure the image covers the whole page */
+            background-repeat: no-repeat; /* Prevent tiling of the image */
+            background-attachment: fixed; /* Make the background fixed on scroll */
+            background-position: center; /* Center the image on the page */
+        }
+        .header {
+            background-color:#3B9B6B;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-logo {
+           
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+       
+    .logo {
+        width: 150px;  /* Adjust the width to make the logo smaller */
+        height: auto;  /* Maintain the aspect ratio */
+    }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #F2F4F1;
+            font-family: 'Lora', serif;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container {
+            max-width: 600px;
+            width: 100%;
+            background-color: rgba(169, 169, 169, 0.7);
+
+            
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .question p {
+            margin: 0 0 10px;
+            font-weight: bold;
+        }
+        .rating {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+        }
+        .rating label {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .rating label.active {
+            background-color: #c8b9b9;
+        }
+        .submit-btn {
+            display: block;
+            padding: 10px 20px;
+            background-color: #908b8b;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: center;
+        }
+        .submit-btn:hover {
+            background-color: #7a6f6f;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+         <div class="header-logo">
+        <img src="Screenshot 2024-11-20 185913.png" alt="Mind Haven Logo" class="logo">
+    </div>
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="haven.html" class="active">Haven</a>
+            <a href="helpyourself.html">Help yourself</a>
+            <a href="talk_to_real_people.html">Talk to real people</a>
+            <a href="fire.html">Vent into the fire</a>
+            <a href="https://mindhavenchat.streamlit.app">Talk to your role model</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="form-container">
+            <form id="mentalHealthForm">
+                <!-- Question 1 -->
+                <div class="question">
+                    <p>1. How often do you feel overwhelmed?</p>
+                    <div class="rating" data-question="q1">
+                        <label data-value="1"></label>
+                        <label data-value="2"></label>
+                        <label data-value="3"></label>
+                        <label data-value="4"></label>
+                        <label data-value="5"></label>
+                        <label data-value="6"></label>
+                        <label data-value="7"></label>
+                        <label data-value="8"></label>
+                        <label data-value="9"></label>
+                        <label data-value="10"></label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <p>2. How often do you feel anxious or stressed?</p>
+                    <div class="rating" data-question="q2">
+                        <label data-value="1"></label>
+                        <label data-value="2"></label>
+                        <label data-value="3"></label>
+                        <label data-value="4"></label>
+                        <label data-value="5"></label>
+                        <label data-value="6"></label>
+                        <label data-value="7"></label>
+                        <label data-value="8"></label>
+                        <label data-value="9"></label>
+                        <label data-value="10"></label>
+                    </div>
+                </div>
+                <div class="question">
+    <p>3. How often do you feel overwhelmed by daily tasks or responsibilities?</p>
+    <div class="rating" data-question="q3">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>4. Have you noticed any changes in your appetite or sleep patterns recently?</p>
+    <div class="rating" data-question="q4">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>5. Do you find it difficult to enjoy activities that you once found pleasurable?</p>
+    <div class="rating" data-question="q5">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>6. How often do you experience feelings of sadness, hopelessness, or worthlessness?</p>
+    <div class="rating" data-question="q6">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>7. Do you feel disconnected from others or isolated, even when you're around people?</p>
+    <div class="rating" data-question="q7">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>8. Have you experienced any major life changes or stressors in the past few months?</p>
+    <div class="rating" data-question="q8">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>9. Do you find it difficult to focus or concentrate on tasks?</p>
+    <div class="rating" data-question="q9">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>10. How often do you feel anxious or worried about things that may or may not happen?</p>
+    <div class="rating" data-question="q10">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>11. Do you have difficulty managing your emotions, such as anger, frustration, or fear?</p>
+    <div class="rating" data-question="q11">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+<div class="question">
+    <p>12. Have you ever thought about harming yourself or wished that you didn’t exist?</p>
+    <div class="rating" data-question="q12">
+        <label data-value="1"></label>
+        <label data-value="2"></label>
+        <label data-value="3"></label>
+        <label data-value="4"></label>
+        <label data-value="5"></label>
+        <label data-value="6"></label>
+        <label data-value="7"></label>
+        <label data-value="8"></label>
+        <label data-value="9"></label>
+        <label data-value="10"></label>
+    </div>
+</div>
+
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle dot selection
+        document.querySelectorAll('.rating').forEach(rating => {
+            rating.addEventListener('click', (event) => {
+                if (event.target.tagName === 'LABEL') {
+                    const selectedValue = parseInt(event.target.dataset.value);
+                    const labels = Array.from(rating.querySelectorAll('label'));
+
+                    labels.forEach(label => {
+                        if (parseInt(label.dataset.value) <= selectedValue) {
+                            label.classList.add('active');
+                        } else {
+                            label.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+<script>
+    document.getElementById('mentalHealthForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        let totalScore = 0;
+        let questionCount = 0;
+
+        document.querySelectorAll('.rating').forEach(rating => {
+            const selectedLabel = rating.querySelector('label.active');
+            if (selectedLabel) {
+                const value = parseInt(selectedLabel.dataset.value, 10);
+                totalScore += value;
+                questionCount++;
+            }
+        });
+
+        const averageScore = (totalScore / questionCount) * 10; // Convert to percentage
+        // Redirect to results.html with the average score in the query string
+        window.location.href = `results.html?averageScore=${averageScore.toFixed(2)}`;
+    });
+</script>
+
+</body>
+</html>
