@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background-image: url('Retronator.gif');
+            background-size: cover; /* Ensure the image covers the whole page */
+            background-repeat: no-repeat; /* Prevent tiling of the image */
+            background-attachment: fixed; /* Make the background fixed on scroll */
+            background-position: center; /* Center the image on the page */
+        }
+        .results-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .score-circle {
+            width: 120px;
+            height: 120px;
+            border: 5px solid #ccc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .message {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #908b8b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #7a6f6f;
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <div class="score-circle" id="score"></div>
+        <div class="message" id="message"></div>
+        <div class="buttons">
+            <a href="fire.html" class="button">Vent into the fire</a>
+            <a href="talk_to_real_people.html" class="button">Consult a Therapist</a>
+        </div>
+    </div>
+
+    <script>
+        // Parse the average score from the query string
+        const queryParams = new URLSearchParams(window.location.search);
+        const averageScore = parseFloat(queryParams.get('averageScore')) || 0;
+
+        // Display the score in the score circle
+        document.getElementById('score').textContent = `${averageScore}/100`;
+
+        // Display the appropriate message
+        const messageElement = document.getElementById('message');
+        if (averageScore > 80) {
+            messageElement.textContent = "You are doing great! Keep it up!";
+        } else if (averageScore > 50) {
+            messageElement.textContent = "I'm sorry, you really feel stressed out :(";
+        } else {
+            messageElement.textContent = "You seem to be struggling. Please seek help.";
+        }
+    </script>
+</body>
+</html>
