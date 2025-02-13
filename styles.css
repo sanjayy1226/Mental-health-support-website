@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d1c5c5;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #4f4f4f;
+  margin-right: 1rem;
+}
+
+header nav a.active {
+  color: #c44d4d;
+}
+
+.accordion {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background-color: #d1c5c5;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background-color: #b8adad;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #ebe4e4;
+  padding: 0 1rem;
+}
+
+.accordion-content ul {
+  padding: 1rem 0;
+  list-style: none;
+  margin: 0;
+}
+
+.accordion-content ul li {
+  margin: 0.5rem 0;
+}
